@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+/*
+kfunction Greeting() {
+  return <h1>Guten Morgen</h1>;
+}
+*/
+
+function UserProfileCard(){
+  return(
+    <div className="card">
+      <img
+        className="card-image"
+        src="https://www.w3schools.com/howto/img_avatar.png"
+        alt="Avatar"
+        style={{width: 100}}
+      />
+      <div className="card-name">Name</div>
+      <div className="profile-name">Profile Name</div>
+    </div>
+  );
+}
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="main-page">
+      <UserProfileCard/>
+    </section>
   );
 }
 

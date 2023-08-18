@@ -9,20 +9,6 @@
   width: 100%;
 }
 
-.card{
-  background-color: aliceblue;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 15px;
-}
-
-.card-name {
-  font-size: 20px;
-  font-weight: bold;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 10px auto;
-}
 
 .card-image {
   border-radius: 50%;
@@ -30,3 +16,45 @@
   width: 100px;
 }
 
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 200px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.counter-label{
+  font-size: 50px;
+}
+.action-button{
+  border: none;
+  padding: 10px 30px;
+  background-color: rgb(100, 214, 43);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.action-btn{
+  border: none;
+  padding: 10px 30px;
+  background-color: rgb(164, 8, 8);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+.action-btn:hover, .action-button:hover{
+  background-color: rgb(209, 234, 234);
+  color: black;
+  scale: 1.07;
+  transition: 0.08s ;
+}

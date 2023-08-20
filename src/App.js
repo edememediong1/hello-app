@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 // import UserProfileCard from "./components/UserProfileCard";
 
 /*
@@ -45,18 +45,28 @@ function App() {
   const[counter, setCounter] = useState(0);
 
   // handle click
-  const handleIncrement = (event)=>{
+  const handleIncrement = (event) =>{
     event.preventDefault();
-    alert("handle Increment")
+    setCounter((prev) => prev + 1)
   }
 
+  const handleDecrement = (event) => {
+    event.preventDefault();
+    setCounter((prev) => prev-1)
+  }
+
+  const clearIncrement = (event) => {
+    event.preventDefault();
+    setCounter(0)
+  }
 
   return (
     <section>
       <div className="container">
-        <h1 className="counter-label">0</h1>
-        <button onClick={handleClick} className="action-button">Increment</button>
-        <button onClick={handleClick} className="action-btn">Decrement</button>
+        <h1 className="counter-label">{counter}</h1>
+        <button onClick={handleIncrement} className="action-button">Increment</button>
+        <button onClick={handleDecrement} className="action-btn">Decrement</button>
+        <button onClick={clearIncrement} className="action-btn">Clear</button>
       </div>
     </section>
   )

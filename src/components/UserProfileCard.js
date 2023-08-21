@@ -11,5 +11,5 @@ function UserProfileCard(){
       </div>
     );
   }
-
+  
   export default UserProfileCard;

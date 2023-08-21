@@ -41,10 +41,10 @@ function Greeting() {
 }
 */
 
-function App() {
+//On Click...........
+function NumberCounter(){
   const[counter, setCounter] = useState(0);
 
-  // handle click
   const handleIncrement = (event) =>{
     event.preventDefault();
     setCounter((prev) => prev + 1)
@@ -61,15 +61,35 @@ function App() {
   }
 
   return (
+    <div className="container">
+      <h1 className="counter-label">{counter}</h1>
+      <button onClick={handleIncrement} className="action-button">
+        Increment
+      </button>
+      <button onClick={handleDecrement} className="action-btn">
+        Decrement
+      </button>
+      <button onClick={clearIncrement} className="action-btn">
+        Clear
+      </button>
+  </div>)
+
+}
+
+//On Change.........
+function App() {
+  
+  return (
     <section>
-      <div className="container">
-        <h1 className="counter-label">{counter}</h1>
-        <button onClick={handleIncrement} className="action-button">Increment</button>
-        <button onClick={handleDecrement} className="action-btn">Decrement</button>
-        <button onClick={clearIncrement} className="action-btn">Clear</button>
-      </div>
+      <form>
+        <input type="text" placeholder="Input Name"/>
+        <input type="number" placeholder="Phone Number"/>
+        <input type="email" placeholder="Email"/>
+        <button>Submit</button>
+      </form>
     </section>
   )
 }
 
 export default App;
+export {NumberCounter};

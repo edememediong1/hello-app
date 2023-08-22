@@ -76,13 +76,29 @@ function NumberCounter(){
 
 }
 
+function OnSubmit(){
+  return(
+    <form>
+      <input type="text" placeholder="Input Name"/>
+      <input type="number" placeholder="Phone Number"/>
+      <input type="email" placeholder="Email"/>
+      <button>Submit</button>
+  </form>
+  )
+}
+
+
 //On Change.........
 function App() {
+  const handleChange = (event) =>{
+    event.preventDefault()
+    console.log(event.target.value)
+  }
   
   return (
     <section>
       <form>
-        <input type="text" placeholder="Input Name"/>
+        <input type="text" placeholder="Input Name" onChange={handleChange}/>
         <input type="number" placeholder="Phone Number"/>
         <input type="email" placeholder="Email"/>
         <button>Submit</button>
@@ -92,4 +108,4 @@ function App() {
 }
 
 export default App;
-export {NumberCounter};
+export {NumberCounter, OnSubmit};

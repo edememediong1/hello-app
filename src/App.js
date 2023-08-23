@@ -77,16 +77,40 @@ function NumberCounter(){
 }
 
 function OnSubmit(){
-  return(
-    <form>
-      <input type="text" placeholder="Input Name"/>
-      <input type="number" placeholder="Phone Number"/>
-      <input type="email" placeholder="Email"/>
+
+  return (
+    <form
+      onSubmit={(event) => {
+        event.preventDefault()
+        console.log("You have submitted...");
+      }}
+    >
+      <input type="text" placeholder="Input Name" />
+      <input type="number" placeholder="Phone Number" />
+      <input type="email" placeholder="Email" />
       <button>Submit</button>
-  </form>
-  )
+    </form>
+  );
 }
 
+// onMouseHover Event
+function OnMouseHover(){
+  const[state , setState] = useState("Hover Here Please!!!!")
+
+  const mouseHover = (event) => {
+    event.preventDefault()
+    setState("Someone Hovered Over Me");
+    setTimeout(() => {
+      setState("EBE")
+    },1000);
+  }
+
+  return(
+    <section>
+      <h1 className="head-hover" onMouseOver={mouseHover}> {state}</h1>
+    </section>
+  )
+}
 
 //On Change.........
 function App() {
@@ -108,4 +132,4 @@ function App() {
 }
 
 export default App;
-export {NumberCounter, OnSubmit};
+export {NumberCounter, OnSubmit,OnMouseHover};

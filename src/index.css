@@ -86,3 +86,11 @@ button{
   border: none;
   border-radius: 20px;
 }
+
+.head-hover{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: aqua;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}

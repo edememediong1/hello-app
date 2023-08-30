@@ -113,14 +113,6 @@ function OnMouseHover(){
 }
 
 
-// React Props.......................................
-function Car({brand, colour}){
-  return(
-    <div className="car">{`${brand}, ${colour}`}</div>
-  )
-}
-
-
 
 //On Change.........................................
 function OnChange() {
@@ -142,10 +134,11 @@ function OnChange() {
 }
 
 // props in react
-function Cars(){
+function Cars(props){
+  console.log(props)
   return(
-    <div>
-      
+    <div className="cars">
+      {`${props.name} | ${props.data}`}
     </div>
   )
 } 
@@ -154,7 +147,7 @@ function Cars(){
 function App() {
   return (
   <section>
-
+    <Cars name="Tesla" data="Emediong"/>
   </section>
   )
 

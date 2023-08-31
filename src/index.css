@@ -96,11 +96,13 @@ button{
 }
 
 .cars{
-  background-color: rgb(138, 227, 6);
+  background-color: rgb(139, 203, 231);
   max-width: 20%;
   padding: 20px 10px;
+  border-radius: 15px;
   text-align: center;
   font-weight: 600;
   font-size: large;
+  margin-bottom: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

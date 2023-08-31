@@ -134,20 +134,41 @@ function OnChange() {
 }
 
 // props in react
-function Cars(props){
-  console.log(props)
+function Cars({data}){
+
+  // const {username, bio, message} = data
   return(
     <div className="cars">
-      {`${props.name} | ${props.data}`}
+      <h1>{data.username}</h1> 
+      <h3>{data.bio}</h3> 
+      <p>{data.message}</p>
     </div>
   )
 } 
 
 
 function App() {
+
+  const data = [{
+    username: "Emediong",
+    bio: "I am an Herald",
+    message: "All the joy I have found, surrendering my crown",
+  },
+  {
+    username: "Anne",
+    bio:"Made for Nations",
+    message: "God is making a name for Himself, through my life"
+  }]
+
+  const listOfData = data.map((item) => {
+    return(
+      <Cars data={item}/>
+    )
+  })
+
   return (
   <section>
-    <Cars name="Tesla" data="Emediong"/>
+    {listOfData}
   </section>
   )
 

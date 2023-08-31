@@ -1,14 +1,19 @@
 import React from "react";
 import "../assets/styles/subscription.css"
 
-function Subscription(details){
+function Subscription({details}){
+    const {id, plan, price, allowedSeats, miles} = details
     return(
-        <div className="Subscribe">
-            <h1>`Hello ${details.plan}`</h1>
-            <h3>{details.price}</h3>
-            <h3>{details.allowedSeats}</h3>
-            <h3>{details.miles}</h3>
+        <div className="subscribeCard">
+            <ul className="Subscribe">
+                <h2>{plan}</h2>
+                <p>{price}</p>
+                <p>{allowedSeats}</p>
+                <p>{miles}</p>
+                <p>{id}</p>
+            </ul>
         </div>
+
     )
 }
 
@@ -16,14 +21,14 @@ function Subscription(details){
 function SubscriptionData(){
     const data = [{
         id: 1,
-        plan: "Free",
+        plan: "FREE",
         price: "$0",
         allowedSeats: "1",
         miles: "1 mile"
     },
     {
         id: 2,
-        plan: "Advanced",
+        plan: "ADVANCED",
         price: "$20",
         allowedSeats: "2",
         miles: "10 miles"
@@ -31,7 +36,7 @@ function SubscriptionData(){
     ,
     {
         id: 3,
-        plan: "pro",
+        plan: "PRO",
         price: "$50",
         allowedSeats: "3",
         miles: "20 miles",

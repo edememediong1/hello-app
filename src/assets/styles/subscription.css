@@ -1,6 +1,19 @@
+
+
 .Subscribe{
-    background-color: blueviolet;
-    height: 500px;
-    width: 500px;
+    background-color: rgb(196, 186, 206);
+    width: 300px;
     color: black;
+    max-width: 150px;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Tahoma, sans-serif;
+    font-size: medium;
+    margin-right: 10px;
 }
+
+.Display{
+    display: flex;
+    flex-direction: row;
+}
+
